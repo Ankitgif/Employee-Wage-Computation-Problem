@@ -1,9 +1,9 @@
 console.log("Welcome to Employee Wage Computation Program");
-let isPresent = 1;
+let isFullTime = 1;
 let isPartTime = 2;
 let EMP_WAGE_PER_HR = 20;
 let empCheck = Math.floor(Math.random() * 3);
-if(isPresent == empCheck){
+if(isFullTime == empCheck){
     console.log("Present");
     let fullDayHr = 8;
     let empWage = EMP_WAGE_PER_HR * fullDayHr;
