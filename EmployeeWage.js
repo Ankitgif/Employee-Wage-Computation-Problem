@@ -6,7 +6,7 @@
  * @Description: Check Employee is Present or Absent, and part time or full time employee. According to the parameter calculate
  *               and store daily wages and total wages.
  * @Parameter   : IS_FULL_TIME, IS_PART_TIME, EMP_WAGE_PER_HR, MAX_HR_IN_MONTH, NUM_OF_WORKING_DAYS
- * @Return      : totalWage, totalEmpHr, totalWorkingDays                
+ * @Return      : totalWage, totalEmpHr, totalWorkingDays, dailyWage                
  *             
  *             
  *                         
@@ -22,7 +22,7 @@ const NUM_OF_WORKING_DAYS = 20;
 let totalWage = 0;
 let totalEmpHr = 0;
 let totalWorkingDays = 0;
-let map = new Map();               // Initializing map
+let dailyWage = new Map();               // Initializing map
 
 const getWorkHr = (empCheck) => {
     switch(empCheck){                           //Check employee is full time or part time employee
@@ -48,8 +48,8 @@ while(totalEmpHr <= MAX_HR_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS){
     let empCheck = Math.floor(Math.random() * 3);
     empHr = getWorkHr(empCheck);
     totalEmpHr = totalEmpHr + empHr;                                                //calculate total employee hour
-    map.set(totalWorkingDays,getDailyEmpWage(empHr));                               //store days and daily employee wage in map
+    dailyWage.set(totalWorkingDays,getDailyEmpWage(empHr));                               //store days and daily employee wage in map
 }
 totalWage = totalEmpHr * EMP_WAGE_PER_HR;                                           //calculate total wage of employee
 console.log("Total wage of employee :",totalWage);
-console.log(map);
+console.log("Day and Daily Wage :",dailyWage);
