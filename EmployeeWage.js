@@ -25,7 +25,7 @@ let totalWorkingDays = 0;
 let map = new Map();               // Initializing map
 
 const getWorkHr = (empCheck) => {
-    switch(empCheck){
+    switch(empCheck){                           //Check employee is full time or part time employee
         case IS_FULL_TIME:
             console.log("Full Time Employee");
             empHr = 8;
@@ -41,15 +41,15 @@ const getWorkHr = (empCheck) => {
     return empHr;
 }
 const getDailyEmpWage = (empHr) => {
-    return empHr * EMP_WAGE_PER_HR;
+    return empHr * EMP_WAGE_PER_HR;             //return daily employee wage
 }
 while(totalEmpHr <= MAX_HR_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS){
-    totalWorkingDays++;
+    totalWorkingDays++;                                                             //incrementing working days 
     let empCheck = Math.floor(Math.random() * 3);
     empHr = getWorkHr(empCheck);
-    totalEmpHr = totalEmpHr + empHr;
-    map.set(totalWorkingDays,getDailyEmpWage(empHr));
+    totalEmpHr = totalEmpHr + empHr;                                                //calculate total employee hour
+    map.set(totalWorkingDays,getDailyEmpWage(empHr));                               //store days and daily employee wage in map
 }
-totalWage = totalEmpHr * EMP_WAGE_PER_HR;
+totalWage = totalEmpHr * EMP_WAGE_PER_HR;                                           //calculate total wage of employee
 console.log("Total wage of employee :",totalWage);
 console.log(map);
