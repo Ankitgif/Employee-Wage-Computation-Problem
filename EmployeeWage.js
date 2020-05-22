@@ -1,13 +1,16 @@
 console.log("Welcome to Employee Wage Computation Program");
-let IS_FULL_TIME = 1;
-let IS_PART_TIME = 2;
-let EMP_WAGE_PER_HR = 20;
-let MAX_HR_IN_MONTH = 100;
+//Constants
+const IS_FULL_TIME = 1;
+const IS_PART_TIME = 2;
+const EMP_WAGE_PER_HR = 20;
+const MAX_HR_IN_MONTH = 100;
+const NUM_OF_WORKING_DAYS = 20;
+//Variables
 let totalWage = 0;
-let NUM_OF_WORKING_DAYS = 20;
 let totalEmpHr = 0;
 let totalWorkingDays = 0;
-let map = new Map();
+let map = new Map();               // Initializing map
+
 const getWorkHr = (empCheck) => {
     switch(empCheck){
         case IS_FULL_TIME:
