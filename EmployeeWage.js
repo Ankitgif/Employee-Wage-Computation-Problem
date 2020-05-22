@@ -1,3 +1,16 @@
+/**
+ * 
+ * @author     : Ankit Kumar
+ * @Date       : 22/05/2020
+ * @Purpose    : Employee Wage Computation Problem
+ * @Description: Check Employee is Present or Absent, and part time or full time employee. According to the parameter calculate
+ *               and store daily wages and total wages.
+ * @Parameter   : IS_FULL_TIME, IS_PART_TIME, EMP_WAGE_PER_HR, MAX_HR_IN_MONTH, NUM_OF_WORKING_DAYS
+ * @Return      : totalWage, totalEmpHr, totalWorkingDays                
+ *             
+ *             
+ *                         
+ **/
 console.log("Welcome to Employee Wage Computation Program");
 //Constants
 const IS_FULL_TIME = 1;
